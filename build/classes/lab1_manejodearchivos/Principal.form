@@ -184,11 +184,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Grabar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGrabarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnObtener">
       <Properties>
         <Property name="text" type="java.lang.String" value="Obtener"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnObtenerActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

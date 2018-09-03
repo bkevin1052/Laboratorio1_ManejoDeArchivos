@@ -27,6 +27,8 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        txtRutaUno.setText("");
+        txtRutaDos.setText("");
     }
 
     /**
@@ -83,8 +85,18 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btnGrabar.setText("Grabar");
+        btnGrabar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrabarActionPerformed(evt);
+            }
+        });
 
         btnObtener.setText("Obtener");
+        btnObtener.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnObtenerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,7 +175,21 @@ public class Principal extends javax.swing.JFrame {
 
                 
             txtRutaUno.setText(ruta);
+        }
     }//GEN-LAST:event_btnRutaArchivoActionPerformed
+
+    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
+        // TODO add your handling code here:
+        
+        LlenarArchivo(txtRutaUno.getText(), txtRutaDos.getText(), "");
+        txtRutaDos.setText("");
+    }//GEN-LAST:event_btnGrabarActionPerformed
+
+    private void btnObtenerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnObtenerActionPerformed
+        // TODO add your handling code here:
+        
+        Obtener(txtRutaUno.getText()," ");
+    }//GEN-LAST:event_btnObtenerActionPerformed
 
     /**
      *
